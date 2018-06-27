@@ -4,10 +4,10 @@
 
 This is the AutoRest configuration file for Authorization.
 
-
-
 ---
+
 ## Getting Started
+
 To build the SDK for Authorization, simply [Install AutoRest](https://aka.ms/autorest/install) and in this folder, run:
 
 > `autorest`
@@ -15,21 +15,22 @@ To build the SDK for Authorization, simply [Install AutoRest](https://aka.ms/aut
 To see additional help and options, run:
 
 > `autorest --help`
+
 ---
 
 ## Configuration
 
-
-
 ### Basic Information
+
 These are the global settings for the Authorization API.
 
 ``` yaml
 openapi-type: arm
-tag: package-2018-01-01-preview
+tag: package-preview-2018-06
 ```
 
 ## Suppression
+
 ``` yaml
 directive:
   - suppress: OperationsAPIImplementation
@@ -39,6 +40,16 @@ directive:
 
 ```
 
+
+### Tag: package-preview-2018-06
+
+These settings apply only when `--tag=package-preview-2018-06` is specified on the command line.
+
+```yaml $(tag) == 'package-preview-2018-06'
+input-file:
+  - >-
+    Microsoft.Authorization/preview/2018-06-01/authorization-ClassicAdminCalls.json
+```
 ### Tag: package-2015-07
 
 These settings apply only when `--tag=package-2015-07` is specified on the command line.
@@ -106,8 +117,8 @@ input-file:
 ```
 
 ---
-# Code Generation
 
+# Code Generation
 
 ## Swagger to SDK
 
@@ -121,7 +132,6 @@ swagger-to-sdk:
   - repo: azure-sdk-for-go
   - repo: azure-sdk-for-node
 ```
-
 
 ## C#
 
@@ -154,11 +164,13 @@ python:
   package-version: 0.40.0
   clear-output-folder: true
 ```
+
 ``` yaml $(python) && $(python-mode) == 'update'
 python:
   no-namespace-folders: true
   output-folder: $(python-sdks-folder)/azure-mgmt-authorization/azure/mgmt/authorization
 ```
+
 ``` yaml $(python) && $(python-mode) == 'create'
 python:
   basic-setup-py: true
