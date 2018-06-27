@@ -3,7 +3,7 @@
   "info": {
     "title": "ApplicationInsightsManagementClient",
     "description": "Azure Application Insights client for selecting pricing plans and options.",
-    "version": "2015-05-01"
+    "version": "1232-32-32"
   },
   "host": "management.azure.com",
   "schemes": [
