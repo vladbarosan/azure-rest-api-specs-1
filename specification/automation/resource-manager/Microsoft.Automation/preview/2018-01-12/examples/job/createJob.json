@@ -4,7 +4,7 @@
         "resourceGroupName": "mygroup",
         "automationAccountName": "ContoseAutomationAccount",
         "jobName": "foo",
-        "api-version": "2017-05-15-preview",
+        "api-version": "2018-01-12",
         "parameters": {
             "properties": {
                 "runbook": {

@@ -6,7 +6,7 @@
     "contact": {
       "name": "Mohamed Enein"
     },
-    "version": "2017-05-15-preview",
+    "version": "2018-01-12",
     "x-ms-code-generation-settings": {  
       "useDateTimeOffset": true
     }
