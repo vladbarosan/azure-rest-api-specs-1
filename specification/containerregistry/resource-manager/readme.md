@@ -4,10 +4,10 @@
 
 This is the AutoRest configuration file for ContainerRegistry.
 
-
-
 ---
+
 ## Getting Started
+
 To build the SDK for ContainerRegistry, simply [Install AutoRest](https://aka.ms/autorest/install) and in this folder, run:
 
 > `autorest`
@@ -15,20 +15,29 @@ To build the SDK for ContainerRegistry, simply [Install AutoRest](https://aka.ms
 To see additional help and options, run:
 
 > `autorest --help`
+
 ---
 
 ## Configuration
 
-
-
 ### Basic Information
+
 These are the global settings for the ContainerRegistry API.
 
 ``` yaml
 openapi-type: arm
-tag: package-2017-10
+tag: package-preview-2018-09
 ```
 
+
+### Tag: package-preview-2018-09
+
+These settings apply only when `--tag=package-preview-2018-09` is specified on the command line.
+
+```yaml $(tag) == 'package-preview-2018-09'
+input-file:
+  - Microsoft.ContainerRegistry/preview/2018-09-01/containerregistry.json
+```
 ### Tag: package-2018-02-preview
 
 These settings apply only when `--tag=package-2018-02-preview` is specified on the command line.
@@ -75,10 +84,9 @@ input-file:
 - Microsoft.ContainerRegistry/preview/2016-06-27-preview/containerregistry.json
 ```
 
-
 ---
-# Code Generation
 
+# Code Generation
 
 ## Swagger to SDK
 
@@ -94,7 +102,6 @@ swagger-to-sdk:
   - repo: azure-sdk-for-go
   - repo: azure-sdk-for-node
 ```
-
 
 ## C#
 
@@ -116,7 +123,7 @@ csharp:
 
 These settings apply only when `--python` is specified on the command line.
 
-```yaml $(python)
+``` yaml $(python)
 python:
   azure-arm: true
   license-header: MICROSOFT_MIT_NO_VERSION
@@ -130,7 +137,7 @@ python:
 
 Generate all API versions currently shipped for this package
 
-```yaml $(python) && $(multiapi)
+``` yaml $(python) && $(multiapi)
 batch:
   - tag: package-2018-02-preview
   - tag: package-2017-10
@@ -169,7 +176,6 @@ python:
   namespace: azure.mgmt.containerregistry.v2017_03_01
   output-folder: $(python-sdks-folder)/azure-mgmt-containerregistry/azure/mgmt/containerregistry/v2017_03_01
 ```
-
 
 ## Go
 
@@ -237,7 +243,6 @@ Please also specify `--go-sdk-folder=<path to the root directory of your azure-s
 ``` yaml $(tag) == 'package-2016-06-preview' && $(go)
 output-folder: $(go-sdk-folder)/services/preview/containerregistry/mgmt/2016-06-27-preview/containerregistry
 ```
-
 
 ## Java
 
