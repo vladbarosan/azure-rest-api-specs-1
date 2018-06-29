@@ -1,7 +1,7 @@
 {
   "swagger": "2.0",
   "info": {
-    "version": "2016-06-01",
+    "version": "2018-09-09",
     "title": "RecoveryServicesClient",
     "x-ms-code-generation-settings": {
       "internalConstructors": false
